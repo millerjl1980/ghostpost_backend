@@ -26,7 +26,7 @@ class PostViewSet(ModelViewSet):
         post = self.get_object()
         post.down_vote += 1
         post.save()
-        return Response("Down Voted")
+        return Response(post.down_vote)
 
     @action(detail=False)
     def boasts(self, request):

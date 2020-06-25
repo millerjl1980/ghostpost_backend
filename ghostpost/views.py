@@ -7,6 +7,7 @@ def addpost(request):
         form = AddPostForm(request.POST)
         if form.is_valid():
             form.save()
+            # https://stackoverflow.com/questions/35903832/how-to-redirect-to-external-url-in-django
             return HttpResponseRedirect("http://localhost:3000/")
     else:
         form = AddPostForm()
