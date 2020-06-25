@@ -15,5 +15,4 @@ class PostSerializer(ModelSerializer):
             'up_vote',
             'down_vote',
             'sub_time',
-            'hidden_key'
         )

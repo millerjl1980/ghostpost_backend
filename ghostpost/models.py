@@ -20,8 +20,8 @@ class Post(models.Model):
     content = models.CharField(max_length=280)
     up_vote = models.IntegerField(default=0)
     down_vote = models.IntegerField(default=0)
+    score = models.IntegerField(default=0)
     sub_time = models.DateTimeField(default=timezone.now)
-    hidden_key = models.CharField(max_length=6, blank=True)
     
     # https://www.youtube.com/watch?v=jCzT9XFZ5bw
     @property
